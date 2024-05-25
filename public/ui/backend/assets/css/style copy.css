@@ -1,0 +1,407 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project:    Project Name
+Version:    1.0
+Last change:24/03/17 [fixed Float bug, vf]
+Author Name:Tawhidul Alam
+Primary use:
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[Table of contents]
+1. Body
+2. Header-top
+2. Navbar
+-------------------------------------------------------------------*/
+/*
+==========================================
+    Reset Css
+==========================================
+*/
+:root {
+    --primary: #fc721e;
+    --dark: #0b0b0b;
+    --body: #000;
+    --box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.4);
+    --white: #f5f3f3;
+}
+
+html,
+body {
+    font-family: 'Lato', sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: var(--body);
+    font-size: 14px;
+    line-height: 1.8;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+ul li {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+.display-4,
+ul {
+    margin: 0;
+    padding: 0;
+    color: var(--dark);
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--white);
+}
+
+.space-90 {
+    height: 90px;
+}
+
+/* ------------------------------------------------
+    ***Header Top  Css Start***
+------------------------------------------------- */
+.top-head{
+    background-image: radial-gradient(rgb(76, 135, 158) 5%, rgb(72, 119, 138), rgb(8, 100, 137));
+    padding: 0.625em 0em;
+}
+.top-head .location span, .contact span{
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+    padding: 2px;
+}
+.top-head .social-contact a{
+    padding: 4px;
+    background-color: transparent;
+}
+.top-head .social-contact a img{
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+.top-head .social-contact a img:hover{
+    background-color: #f5f3f3;
+}
+.top-body{
+    width: 100%;
+    height: 100vh;
+    background: fixed;
+    background-image: url("../img/doctor.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    
+}
+.top-upper-body{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(rgb(40, 189, 242, 0.3),rgb(8, 100, 137,0.5),rgb(0, 0, 0,0.8));
+
+}
+.nav{
+    background-image: radial-gradient(rgb(0,0,0,0),rgb(0,0,0,0),rgb(0,0,0,0.1));
+    padding: 0.625em 0em;
+}
+.logo img{
+    height: 40px;
+}
+.top-upper-body .nav-item ul li{
+    padding: 5px 10px;
+    background-color: transparent;
+}
+.top-upper-body .nav-item ul li a{
+    color: #cfc3c3;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.top-upper-body .nav-item ul li:hover{
+   background-image: radial-gradient(rgb(20, 135, 158) 5%, rgb(10, 119, 138), rgb(8, 100, 137)); 
+   border-radius: 5px;
+}
+.poster-area{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.poster-area .poster-body{
+    width: 50%;  
+}
+.poster-area .poster-body h1{
+    color: #f5f3f3;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    word-spacing: 5px;
+    letter-spacing: 1px;
+}
+.poster-area .poster-body p{
+    color: #565050;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-bottom: 10px;
+}
+.poster-area .poster-body a{
+    padding: 5px 10px;
+    color: #f5f3f3;
+    text-transform: capitalize;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image: radial-gradient(rgb(20, 135, 158) 5%, rgb(10, 119, 138), rgb(8, 100, 137));
+}
+/* =======================================dashboard CSS start====================================================== */
+.hidden{
+    opacity: 0;
+    width: 0;
+    transition: 1s;
+}
+.show{
+    transition: 1s;
+}
+.hidden-drop{
+    opacity: 0;
+    transition: 1s;
+}
+.main-body .side-navbar{
+    padding: 0;
+    background-image: radial-gradient(rgb(36, 173, 200) 5%, rgb(34, 155, 177), rgb(12, 141, 192));
+    height: 100vh;
+    
+}
+.main-body .side-navbar .side-nav-item{
+    padding: 30px 0px 0px 30px;
+}
+.nav-logo{
+    padding-left: 30px;
+    padding-top: 30px;
+    border-bottom: 1px solid #f5f3f3;
+    background-image: linear-gradient(rgb(0,0,0,0),rgb(0,0,0,0),rgb(0,0,0,0.1));
+
+}
+.main-body .side-navbar .side-nav-item ul li{
+    border-bottom: 1px solid #f5f3f3;
+    background-image: linear-gradient(rgb(0,0,0,0),rgb(0,0,0,0),rgb(0,0,0,0.1));
+    padding: 5px;
+}
+.main-body .side-navbar .side-nav-item ul li a{
+    color: #f5f3f3;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.main-content{
+    padding: 0;
+}
+.main-content .nav-bar{
+    padding-left: 10px;
+    padding-right: 10px;
+    background-image: linear-gradient(rgb(0,0,0,0),rgb(0,0,0,0),rgb(0,0,0,0.1));
+}
+.main-content .nav-bar button{
+    border: none;
+}
+.main-content .nav-bar button img{
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.user-icon{
+    padding-right: 15px;
+    position: relative;
+}
+.user-icon span{
+    padding: 0px 3px;
+}
+.user-icon .profile-photo{
+    padding: 2px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+.main-content .nav-bar .nav-item{
+    position: absolute;
+    background-color: #ffffff;
+    border: 1px solid #ded7d7;
+    border-radius: 5px;
+    top: 100%;
+    right: 10%;
+    
+}
+.main-content .nav-bar .nav-item ul li{
+    border-bottom:1px solid #ded7d7 ;
+    padding: 5px 10px;
+}
+.main-content .nav-bar .nav-item ul li a{
+    color:  rgb(12, 141, 192);
+    text-transform: capitalize;
+    font-size: 12px;
+    font-weight: 300;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.main-content .nav-bar .nav-item ul li:hover{
+    background-color: rgb(5, 5, 5,0.1);
+}
+.main-content .nav-bar .nav-item ul li:hover a{
+    color: #0b0b0b;
+}
+.main-content .nav-bar .nav-item .profile img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    margin: 2px;
+}
+.main-content .nav-bar .nav-item .profile div{
+    padding: 5px;
+}
+.main-content .nav-bar .nav-item .profile div p{
+    line-height: 1;
+    line-break: 1;
+    font-weight: 300;
+    font-size: 1em;
+}
+.main-content .nav-bar .nav-item .profile div p:first-child{
+    font-weight: 700;
+    font-size: 18px;
+}
+/* ========================login area css===================================== */
+.login_area{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login_body{
+    color: #f5f3f3;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid rgb(8, 100, 137);
+    width: 30%; 
+    background-image: radial-gradient(rgb(10, 98, 130),rgb(8, 46, 61),rgb(6, 42, 57));
+}
+.login_form .email, .password{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-weight: 400;
+    font-size: 18px;
+}
+.login_form .email input, .password input{
+    border-radius: 5px;
+    border: none;
+    color: #000;
+}
+.login_form .email label, .password label{
+    color: #f5f3f3;
+    text-transform: capitalize;
+}
+.login_form button{
+    color: #ffffff;
+    font-size: 16px;
+    padding: 2px 15px;
+    background-color: rgb(36, 173, 200);
+    border: none;
+    border-radius: 2px;
+}
+/* ========================register Area CSS================================ */
+.register_area{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.register_body{
+    color: #f5f3f3;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: capitalize;
+    padding: 30px;
+    border-radius: 10px;
+    border: 2px solid rgb(8, 100, 137);
+    width: 30%; 
+    background-image: radial-gradient(rgb(10, 98, 130),rgb(8, 46, 61),rgb(6, 42, 57));
+}
+.register_form .email, .password, .name, .password_confirmation{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-weight: 400;
+    font-size: 18px;
+}
+.register_form .email input, .password input,.name input, .password_confirmation input{
+    border-radius: 5px;
+    border: none;
+    color: #000;
+}
+.register_form .email label, .password label,.name label, .password_confirmation label{
+    color: #f5f3f3;
+    text-transform: capitalize;
+}
+.register_form button{
+    color: #ffffff;
+    font-size: 16px;
+    padding: 2px 15px;
+    background-color: rgb(36, 173, 200);
+    border: none;
+    border-radius: 2px;
+}
+
+/*
+============================================ image Intarvention Required================================================== 
+use Intervention\Image\ImageManager;
+use Intervention\Image\Drivers\Gd\Driver;
+
+// create image manager with desired driver
+$manager = new ImageManager(new Driver());
+
+// read image from file system
+$image = $manager->read('images/example.jpg');
+
+// resize image proportionally to 300px width
+$image->scale(width: 300);
+
+// insert watermark
+$image->place('images/watermark.png');
+
+// save modified image in new format 
+$image->toPng()->save('images/foo.png');
+*/
